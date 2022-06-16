@@ -1,0 +1,166 @@
+/* Grillas */
+.grilla {
+    display: grid;
+    grid-template-columns: 0.5fr 3fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "nav nav"
+      "main main"
+      "footer footer";
+}
+
+.grilla2 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 3fr 0.5fr;
+    gap: 0px;
+    grid-auto-flow: row;
+    grid-template-areas: 
+    "nav"
+    "main2"
+    "footer";
+}
+
+/* Nav */
+
+.nav {
+    grid-area: nav;
+}
+
+.navbar>.container, .navbar>.container-fluid, .navbar>.container-lg, .navbar>.container-md, .navbar>.container-sm, .navbar>.container-xl, .navbar>.container-xxl {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Main */
+
+.main {
+    grid-area: main;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    grid-auto-columns: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: column;
+    grid-template-areas: 
+    "item1 item2"
+    "item3 item4";
+    background-color: antiquewhite;
+    animation: mainAparece 1s;
+}
+
+.infoIndexItem1 {
+    grid-area: item1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.infoIndexItem2 {
+    grid-area: item2;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.infoIndexItem3 {
+    grid-area: item3;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.infoIndexItem4 {
+    grid-area: item4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+/* DemasMains */
+
+.main2 {
+    grid-area: main2;
+    display: flex;
+    background-color: antiquewhite;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    animation: mainAparece 1s;
+}
+
+/* Formulario Contacto */
+
+.formulario {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+/* Footer */
+
+.footer {
+    grid-area: footer;
+    display: flex;
+    background-color: white;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+footer .lista {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+footer .lista li {
+    margin: 10px;
+}
+
+footer .lista a {
+    color: black;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+footer .lista a:hover {
+    font-weight: 900;
+    color: white;
+    background-color: black;
+}
+  
+html, body , .grilla {
+    height: 100%;
+}
+
+/* Animaciones */
+
+@keyframes mainAparece {
+    from {
+        transform: translateY(-1000px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
