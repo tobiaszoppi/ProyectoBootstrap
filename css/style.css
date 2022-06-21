@@ -113,6 +113,9 @@
     align-items: center;
     justify-content: space-around;
 }
+.formulario textarea {
+    resize: both;
+}
 
 /* Footer */
 
